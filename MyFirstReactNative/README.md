@@ -51,4 +51,4 @@ Join our community of developers creating universal apps.
 
 ## Submission Screenshot
 
-![image](MyFirstReactNative/assets/images/submission_screenshot.png)
+![image](/assets/images/submission_screenshot.png)
