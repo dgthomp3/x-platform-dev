@@ -2,14 +2,14 @@
 
 ## Design and Purpose
 
-**Grocery List Manager** is a simple and intuitive mobile application built with React Native and TypeScript. It helps users efficiently track the items they need to purchase while grocery shopping. The app is designed for everyday consumers who want a clean and functional interface to manage their shopping needs without unnecessary complexity.
+This **Grocery List Manager** is a simple and intuitive mobile application built with React Native and TypeScript. It helps users efficiently track the items they need to purchase while grocery shopping. The app is designed for everyday consumers who want a clean and functional interface to manage their shopping needs without unnecessary complexity.
 
 The app allows users to:
 - Add grocery items dynamically
 - View a scrollable list of added items
 - Avoid adding empty or duplicate entries
 
-## ✅ Basic Use
+## Usage
 
 1. **Add an Item**: Use the input field at the top of the screen to type a grocery item. Press the "Add" button to insert the item into your list.
 2. **View List**: Your grocery list is displayed below the input. Scroll through it as needed.
@@ -23,8 +23,6 @@ The app allows users to:
 
 ## Screenshots
 
-> _Note: Add actual screenshots after running the app on an emulator or real device._
-
 ### Screenshot
 
 ![Screenshot](assets/list_screenshot.png)
@@ -33,7 +31,7 @@ The app allows users to:
 
 ![Demo](assets/demo.gif)
 
-## 🧑‍💻 Tech Stack
+## Tech Stack
 
 - **React Native**
 - **TypeScript**
