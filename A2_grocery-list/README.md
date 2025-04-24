@@ -23,12 +23,6 @@ The app allows users to:
 
 ## Screenshots
 
-### Screenshot
-
-![Screenshot](assets/list_screenshot.png)
-
-### App Demo
-
 ![Demo](assets/demo.gif)
 
 ## Tech Stack
