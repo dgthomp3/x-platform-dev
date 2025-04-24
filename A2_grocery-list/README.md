@@ -27,7 +27,7 @@ The app allows users to:
 
 ### Screenshot
 
-![Screenshot](assets/Simulator%20Screenshot%20-%20iPhone%2016%20Pro%20-%202025-04-24%20at%2012.57.09.png)
+![Screenshot](assets/list_screenshot.png)
 
 ### App Demo
 
