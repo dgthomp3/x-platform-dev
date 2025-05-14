@@ -23,18 +23,15 @@ export default function BottomTabs() {
         screenOptions={({ route }) => ({
           headerShown: false,
           tabBarIcon: ({ color, size }) => {
-            let iconName;
-            if (route.name === 'Gallery') {
-              iconName = 'image-outline';
-            } else if (route.name === 'PictureViewer') {
-              iconName = 'eye-outline';
-            } else if (route.name === 'Profile') {
-              iconName = 'person-circle-outline';
-            }
+            const icons: Record<keyof RootTabParamList, keyof typeof Ionicons.glyphMap> = {
+              Gallery: 'image-outline',
+              PictureViewer: 'eye-outline',
+              Profile: 'person-circle-outline',
+            };
+            const iconName = icons[route.name as keyof RootTabParamList];
             return <Ionicons name={iconName} size={size} color={color} />;
           },
-          tabBarActiveTintColor: '#6200EE',
-          tabBarInactiveTintColor: 'gray',
+          
         })}
       >
         <Tab.Screen name="Gallery" component={Gallery} />
