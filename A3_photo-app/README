@@ -23,19 +23,6 @@ This app is intended for mobile users who enjoy minimalist UI/UX with persistent
 
 ---
 
-## Screenshots
+## Demo
 
-_(Add images after building UI)_
-
-1. Gallery View  
-2. Picture Viewer  
-3. Profile Editor  
-
----
-
-## Getting Started
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/my-gallery-app.git
-   cd my-gallery-app
+![Demo](assets/demo.gif)
