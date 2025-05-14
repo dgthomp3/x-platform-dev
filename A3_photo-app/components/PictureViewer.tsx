@@ -2,7 +2,6 @@ import React from 'react';
 import { View, Image, Text, StyleSheet, Button } from 'react-native';
 import { useRoute, useNavigation, RouteProp } from '@react-navigation/native';
 import { RootTabParamList } from '../navigation/BottomTabs';
-import { ImageSourcePropType } from 'react-native';
 
 type PictureViewerRouteProp = RouteProp<RootTabParamList, 'PictureViewer'>;
 

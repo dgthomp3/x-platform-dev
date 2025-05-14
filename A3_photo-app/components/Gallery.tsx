@@ -1,9 +1,10 @@
 import React from "react";
-import { View, FlatList, Image, Text, StyleSheet, TouchableOpacity } from "react-native";
+import { FlatList, Image, Text, StyleSheet, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootTabParamList } from '../navigation/BottomTabs';
 import { ImageSourcePropType } from 'react-native';
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export interface ImageItem {
     id: string;
@@ -44,7 +45,7 @@ export default function Gallery() {
     );
 
     return (
-        <View style={styles.container}>
+        <SafeAreaView style={styles.container}>
         <FlatList
             data={sampleImages}
             renderItem={renderItem}
@@ -52,7 +53,7 @@ export default function Gallery() {
             numColumns={2}
             contentContainerStyle={styles.listContainer}
         />
-        </View>
+        </SafeAreaView>
     );
 };
 
