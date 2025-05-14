@@ -32,6 +32,18 @@ const sampleImages: ImageItem[] = [
         thumbnail: require('../assets/forest.jpg'), 
         fullImage: require('../assets/forest.jpg') 
     },
+    { 
+        id: '4', 
+        title: 'Volcano', 
+        thumbnail: require('../assets/volcano.jpg'), 
+        fullImage: require('../assets/volcano.jpg') 
+    },
+    { 
+        id: '5', 
+        title: 'City', 
+        thumbnail: require('../assets/newyork.jpg'), 
+        fullImage: require('../assets/newyork.jpg') 
+    },
 ];
 
 export default function Gallery() {
