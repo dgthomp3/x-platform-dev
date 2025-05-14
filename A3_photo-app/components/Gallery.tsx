@@ -3,32 +3,33 @@ import { View, FlatList, Image, Text, StyleSheet, TouchableOpacity } from "react
 import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootTabParamList } from '../navigation/BottomTabs';
+import { ImageSourcePropType } from 'react-native';
 
-interface ImageItem {
+export interface ImageItem {
     id: string;
     title: string;
-    thumbnail: string;
-    fullImage: string;
-};
+    thumbnail: ImageSourcePropType;
+    fullImage: ImageSourcePropType;
+  }
 
 const sampleImages: ImageItem[] = [
     { 
         id: '1', 
         title: 'Mountains', 
-        thumbnail: 'https://via.placeholder.com/150', 
-        fullImage: 'https://via.placeholder.com/600' 
+        thumbnail: require('../assets/mountains.jpg'), 
+        fullImage: require('../assets/mountains.jpg') 
     },
     { 
         id: '2', 
         title: 'Beach', 
-        thumbnail: 'https://via.placeholder.com/150', 
-        fullImage: 'https://via.placeholder.com/600' 
+        thumbnail: require('../assets/beach.jpg'), 
+        fullImage: require('../assets/beach.jpg')
     },
     { 
         id: '3', 
         title: 'Forest', 
-        thumbnail: 'https://via.placeholder.com/150', 
-        fullImage: 'https://via.placeholder.com/600' 
+        thumbnail: require('../assets/forest.jpg'), 
+        fullImage: require('../assets/forest.jpg') 
     },
 ];
 
@@ -37,7 +38,7 @@ export default function Gallery() {
 
     const renderItem = ({ item }: { item: ImageItem }) => (
         <TouchableOpacity style={styles.card} onPress={() => navigation.navigate('PictureViewer', { image: item.fullImage, title: item.title })}>
-            <Image source={{ uri: item.thumbnail }} style={styles.image} />
+            <Image source={item.thumbnail} style={styles.image} />
             <Text style={styles.title}>{item.title}</Text>
         </TouchableOpacity>
     );

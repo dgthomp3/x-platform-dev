@@ -5,11 +5,12 @@ import Gallery from '../components/Gallery';
 import PictureViewer from '../components/PictureViewer';
 import Profile from '../components/Profile';
 import { Ionicons } from '@expo/vector-icons';
+import { ImageSourcePropType } from 'react-native';
 
 // Define the type for the tab navigator
 export type RootTabParamList = {
     Gallery: undefined;
-    PictureViewer: { image: string; title: string };
+    PictureViewer: { image: ImageSourcePropType; title: string };
     Profile: undefined;
 };
 
