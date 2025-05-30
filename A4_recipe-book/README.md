@@ -53,3 +53,4 @@ CREATE TABLE recipes (
   difficulty VARCHAR(50),
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+```
