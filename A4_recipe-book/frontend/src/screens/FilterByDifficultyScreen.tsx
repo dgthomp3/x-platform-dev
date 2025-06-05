@@ -1,27 +1,27 @@
 import React, { useState } from 'react';
 import { View, TextInput, Button, FlatList, StyleSheet } from 'react-native';
-import { getRecipesByCuisine } from '../api/recipes';
+import { getRecipesByDifficulty } from '../api/recipes';
 import RecipeCard from '../components/RecipeCard';
 
-export default function FilterByCuisineScreen() {
-  const [cuisine, setCuisine] = useState('');
+export default function FilterByDifficultyScreen() {
+  const [difficulty, setDifficulty] = useState('');
   const [recipes, setRecipes] = useState<any[]>([]);
 
   const handleSearch = async () => {
     try {
-      const data = await getRecipesByCuisine(cuisine);
+      const data = await getRecipesByDifficulty(difficulty);
       setRecipes(data);
     } catch (err) {
-      console.error('Failed to fetch recipes by cuisine:', err);
+      console.error('Failed to fetch recipes by difficulty:', err);
     }
   };
 
   return (
     <View style={styles.container}>
       <TextInput
-        placeholder="Enter cuisine (e.g. Italian, Indian)"
-        value={cuisine}
-        onChangeText={setCuisine}
+        placeholder="Enter difficulty (e.g. Easy, Medium, Hard)"
+        value={difficulty}
+        onChangeText={setDifficulty}
         style={styles.input}
       />
       <Button title="Search" onPress={handleSearch} />

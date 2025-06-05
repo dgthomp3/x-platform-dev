@@ -1,17 +1,17 @@
-# 🍲 Recipe Book App
+# Recipe Book App
 
 **Team Members**:  
 - Dallas Thompson III  
 
 ---
 
-## 📱 App Overview
+## App Overview
 
 The Recipe Book App allows users to submit and browse recipes by cuisine, difficulty, or keyword. Designed to help aspiring chefs and home cooks organize and explore meals, this app demonstrates full-stack development using a React Native frontend and PHP backend APIs, with optional MySQL integration.
 
 ---
 
-## 🎨 Front-End (React Native + TypeScript)
+## Front-End (React Native + TypeScript)
 
 ### Screens:
 - **Submit Recipe** – Form to add new recipes.
@@ -27,7 +27,7 @@ The Recipe Book App allows users to submit and browse recipes by cuisine, diffic
 
 ---
 
-## 🌐 Backend APIs (PHP)
+## Backend APIs (PHP)
 
 ### POST:
 - `submitRecipe.php`: Accepts recipe form data and stores it.
