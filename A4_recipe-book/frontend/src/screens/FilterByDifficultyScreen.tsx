@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, TextInput, Button, FlatList, StyleSheet } from 'react-native';
-import { getRecipesByDifficulty } from '../api/recipes';
+import { getRecipesByDifficulty } from '../../../backend/api/recipes';
 import RecipeCard from '../components/RecipeCard';
 
 export default function FilterByDifficultyScreen() {

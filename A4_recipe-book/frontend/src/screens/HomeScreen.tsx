@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { View, StyleSheet, Keyboard } from 'react-native';
-import { getAllRecipes, searchRecipesByIngredient } from '../api/recipes';
+import { getAllRecipes, searchRecipesByIngredient } from '../../../backend/api/recipes';
 import ViewAllRecipesScreen from './ViewAllRecipesScreen';
 import SearchBar from '../components/SearchBar';
 import SubmitRecipeComponent from '../components/SubmitRecipeComponent';
