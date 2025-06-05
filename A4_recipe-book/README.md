@@ -5,52 +5,45 @@
 
 ---
 
-## App Overview
+## 📱 App Overview
 
-The Recipe Book App allows users to submit and browse recipes by cuisine, difficulty, or keyword. Designed to help aspiring chefs and home cooks organize and explore meals, this app demonstrates full-stack development using a React Native frontend and PHP backend APIs, with optional MySQL integration.
+The Recipe Book App allows users to submit and browse recipes by cuisine, difficulty, or keyword. Designed to help aspiring chefs and home cooks organize and explore meals, this app demonstrates full-stack development using a **React Native frontend** and **PHP backend APIs**
 
 ---
 
-## Front-End (React Native + TypeScript)
+## ⚛️ Front-End (React Native + TypeScript)
 
-### Screens:
-- **Submit Recipe** – Form to add new recipes.
-- **View All Recipes** – Displays all submitted recipes.
-- **Filter by Cuisine** – View recipes by cuisine type.
-- **Filter by Difficulty** – View recipes by difficulty level.
-- *(Optional)* **Search by Ingredient**
+### Main Features:
+- **Submit Recipe** – Floating Action Button (FAB) opens a modal form to submit new recipes.
+- **View All Recipes** – Displays a scrollable list of submitted recipes using reusable cards.
+- **Search by Ingredient** – Users can search recipes by keyword using a dynamic search bar.
+- **Filter by Cuisine** – Displays recipes filtered by cuisine type (e.g., Italian, Thai).
+- **Filter by Difficulty** – Displays recipes filtered by difficulty level (e.g., Easy, Hard).
+
+### Components & Structure:
+- `HomeScreen.tsx` – Handles recipe display, search input, and refresh after submission.
+- `SubmitRecipeComponent.tsx` – FAB and modal form for submitting recipes.
+- `SearchBar.tsx` – Reusable search input component.
+- `ViewAllRecipesScreen.tsx` – Recipe list display using FlatList and custom cards.
+- `RecipeCard.tsx` – Reusable UI component for individual recipe entries.
 
 ### Tech Stack:
-- React Native (via Expo)
-- React Navigation
+- React Native (Expo)
 - TypeScript
+- React Navigation
+- SafeAreaView + Modal + FlatList
 
 ---
 
-## Backend APIs (PHP)
+## 🖥️ Backend APIs (PHP)
 
 ### POST:
-- `submitRecipe.php`: Accepts recipe form data and stores it.
+- `submitRecipe.php` – Accepts recipe form data and saves it as a JSON file in a `recipes/` directory.
 
-### GET: ✅ *(2+ for assignment requirement)*
-- `getAllRecipes.php`
-- `getRecipesByCuisine.php?cuisine=Thai`
-- `getRecipesByDifficulty.php?level=Easy`
-- *(Optional)* `searchRecipes.php?ingredient=chicken`
+### GET:
+- `getAllRecipes.php` – Returns all stored recipes.
+- `getRecipesByCuisine.php?cuisine=Thai` – Filters recipes by cuisine.
+- `getRecipesByDifficulty.php?level=Easy` – Filters recipes by difficulty.
+- `searchRecipes.php?ingredient=chicken` – Returns recipes containing a specific ingredient.
 
----
-
-## 💾 Optional: Database Schema (MySQL)
-
-```sql
-CREATE TABLE recipes (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  username VARCHAR(100),
-  title VARCHAR(255),
-  ingredients TEXT,
-  instructions TEXT,
-  cuisine VARCHAR(50),
-  difficulty VARCHAR(50),
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-```
+> All responses use `application/json` format for compatibility with the mobile frontend.
